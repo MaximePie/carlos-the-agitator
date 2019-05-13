@@ -25,3 +25,9 @@ yarn-error.log
 \.idea/workspace\.xml
 
 \.styleci\.yml
+
+\.idea/
+
+\.vagrant/machines/default/virtualbox/
+
+\.vagrant/rgloader/
