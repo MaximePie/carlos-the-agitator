@@ -7,6 +7,7 @@
 
         <title>BigCarlos</title>
         <link rel="shortcut icon" href="{{ asset('images/favicon/favicon_carlos.jpg') }}">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
