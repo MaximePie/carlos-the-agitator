@@ -26,7 +26,7 @@
 }
 
 .Homepage-landing__image {
-  height: 55vh;
+  height: 60vh;
   border-radius: 6px;
   -webkit-animation: landingImageIdle 5000ms infinite ease-in-out;
           animation: landingImageIdle 5000ms infinite ease-in-out;
