@@ -11,9 +11,9 @@
 
 .Homepage {
   border: solid;
-  background: linear-gradient(black, blue);
   width: 100vw;
   padding: 16px;
+  background-image: url(/images/background.png?13097ccedf3e281ea14a8ace743ca67f);
 }
 
 .Homepage-landing {
@@ -27,6 +27,9 @@
 
 .Homepage-landing__image {
   height: 55vh;
+  border-radius: 6px;
+  -webkit-animation: landingImageIdle 5000ms infinite ease-in-out;
+          animation: landingImageIdle 5000ms infinite ease-in-out;
 }
 
 .Homepage-landing__header {
@@ -38,40 +41,90 @@
   margin: 16px;
 }
 
-.Homepage-landing__header:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  transition: -webkit-transform 200ms;
-  transition: transform 200ms;
-  transition: transform 200ms, -webkit-transform 200ms;
-}
-
 .Homepage-landing__header--slider {
-  -webkit-animation: slidein 250ms forwards;
-          animation: slidein 250ms forwards;
+  -webkit-animation: slidein 350ms forwards;
+          animation: slidein 350ms forwards;
 }
 
 @-webkit-keyframes slidein {
-  from {
+  0% {
     margin-left: 100%;
     width: 300%;
+    opacity: 0;
   }
 
-  to {
+  80% {
+    opacity: 0.2;
+  }
+
+  100% {
     margin-left: 0%;
     width: 100%;
+    opacity: 1;
   }
 }
 
 @keyframes slidein {
-  from {
+  0% {
     margin-left: 100%;
     width: 300%;
+    opacity: 0;
   }
 
-  to {
+  80% {
+    opacity: 0.2;
+  }
+
+  100% {
     margin-left: 0%;
     width: 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes landingImageIdle {
+  0% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  50% {
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
+  100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes landingImageIdle {
+  0% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+
+  50% {
+    -webkit-filter: blur(2px);
+            filter: blur(2px);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+
+  100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 

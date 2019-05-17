@@ -61624,46 +61624,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _images_homepage_wallpaper_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../images/homepage/wallpaper.jpg */ "./resources/images/homepage/wallpaper.jpg");
 /* harmony import */ var _images_homepage_wallpaper_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_homepage_wallpaper_jpg__WEBPACK_IMPORTED_MODULE_2__);
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
-
-function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
 
 
 
 function Homepage() {
-  var landingText = [{
-    text: "De direction ?",
-    timeout: 500
-  }, {
-    text: "De vie ?",
-    timeout: 500
-  }, {
-    text: "De pensée ?",
-    timeout: 500
-  }, {
-    text: "Le monde ?",
-    timeout: 2000
-  }];
-
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(1),
-      _React$useState2 = _slicedToArray(_React$useState, 2),
-      textSliderCurrentIndex = _React$useState2[0],
-      setTextSliderCurrentIndex = _React$useState2[1];
-
-  react__WEBPACK_IMPORTED_MODULE_0___default.a.useEffect(function () {
-    setTimeout(function () {
-      if (textSliderCurrentIndex === landingText.length - 1) {
-        setTextSliderCurrentIndex(0);
-      } else {
-        setTextSliderCurrentIndex(textSliderCurrentIndex + 1);
-      }
-    }, landingText[textSliderCurrentIndex].timeout);
-  }, [textSliderCurrentIndex]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Homepage"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -61676,7 +61640,7 @@ function Homepage() {
     src: _images_homepage_wallpaper_jpg__WEBPACK_IMPORTED_MODULE_2___default.a
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "Homepage-landing__header Homepage-landing__header--slider"
-  }, landingText[textSliderCurrentIndex].text)));
+  }, "De monde ?")));
 }
 
 if (document.getElementById('root')) {

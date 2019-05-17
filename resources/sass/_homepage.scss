@@ -1,8 +1,8 @@
 .Homepage {
   border: solid;
-  background: linear-gradient(black, blue);
   width: 100vw;
   padding: 16px;
+  background-image: url("../images/homepage/background.png");
 
   &-landing {
     height: 100vh;
@@ -14,6 +14,8 @@
 
     &__image {
       height: 55vh;
+      border-radius: 6px;
+      animation: landingImageIdle 5000ms infinite ease-in-out;
     }
 
     &__header {
@@ -22,26 +24,44 @@
       text-align:  center;
       margin: 16px;
 
-      &:hover {
-        transform: scale(1.2);
-        transition: transform 200ms;
-      }
-
       &--slider {
-        animation: slidein 250ms forwards;
+        animation: slidein 350ms forwards;
       }
     }
   }
 }
 
 @keyframes slidein {
-  from {
+  0% {
     margin-left: 100%;
     width: 300%;
+    opacity: 0;
   }
 
-  to {
+  80% {
+    opacity: 0.2;
+  }
+
+  100% {
     margin-left: 0%;
     width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes landingImageIdle {
+  0% {
+    filter: blur(0);
+    transform: scale(1.0);
+  }
+
+  50% {
+    filter: blur(2px);
+    transform: scale(1.05);
+  }
+
+  100% {
+    filter: blur(0);
+    transform: scale(1.0);
   }
 }
