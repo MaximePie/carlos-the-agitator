@@ -1,6 +1,31 @@
 .Homepage {
   border: solid;
   background: linear-gradient(black, blue);
-  height: 100vh;
   width: 100vw;
+  padding: 16px;
+
+  &-landing {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+
+    &__image {
+      height: 55vh;
+    }
+
+    &__header {
+      transition: transform 200ms;
+      font-size: 3.5em;
+      text-align:  center;
+      margin: 16px;
+
+      &:hover {
+        transform: scale(1.2);
+        transition: transform 200ms;
+      }
+    }
+  }
 }

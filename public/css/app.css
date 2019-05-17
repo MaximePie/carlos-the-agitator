@@ -1,10 +1,49 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+/** ATOMS */
+
+.Card {
+  margin: 16px;
+  padding: 16px;
+  display: inline-block;
+  border-radius: 6px;
+}
+
 .Homepage {
   border: solid;
   background: linear-gradient(black, blue);
-  height: 100vh;
   width: 100vw;
+  padding: 16px;
+}
+
+.Homepage-landing {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.Homepage-landing__image {
+  height: 55vh;
+}
+
+.Homepage-landing__header {
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+  font-size: 3.5em;
+  text-align: center;
+  margin: 16px;
+}
+
+.Homepage-landing__header:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
 }
 
 /*!

@@ -25,6 +25,7 @@
         "sass-loader": "^7.1.0"
     },
     "dependencies": {
+        "@material-ui/core": "^3.9.3",
         "graphiql": "^0.13.0"
     }
 }

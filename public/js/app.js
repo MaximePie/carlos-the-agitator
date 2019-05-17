@@ -61515,6 +61515,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/images/homepage/wallpaper.jpg":
+/*!*************************************************!*\
+  !*** ./resources/images/homepage/wallpaper.jpg ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/wallpaper.jpg?13b72ad15dbd3f46ec590c0d0cfa41c4";
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -61611,6 +61622,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _images_homepage_wallpaper_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../images/homepage/wallpaper.jpg */ "./resources/images/homepage/wallpaper.jpg");
+/* harmony import */ var _images_homepage_wallpaper_jpg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_images_homepage_wallpaper_jpg__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61632,6 +61645,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Homepage =
 /*#__PURE__*/
 function (_Component) {
@@ -61649,8 +61663,16 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "Homepage"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "alert-info"
-      }, "Salut !"));
+        className: "Homepage-landing"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "Homepage-landing__header"
+      }, "Et si on changeait..."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "Homepage-landing__image",
+        alt: "Fond d'\xE9cran",
+        src: _images_homepage_wallpaper_jpg__WEBPACK_IMPORTED_MODULE_2___default.a
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "Homepage-landing__header"
+      }, "Le monde ?")));
     }
   }]);
 
@@ -61683,8 +61705,8 @@ if (document.getElementById('root')) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/maxime/Documents/carlos-the-agitator/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/maxime/Documents/carlos-the-agitator/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Maxime\Documents\carlos_the_agitator\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Maxime\Documents\carlos_the_agitator\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
