@@ -26,6 +26,22 @@
         transform: scale(1.2);
         transition: transform 200ms;
       }
+
+      &--slider {
+        animation: slidein 250ms forwards;
+      }
     }
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
 }

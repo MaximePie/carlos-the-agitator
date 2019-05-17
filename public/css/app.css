@@ -46,6 +46,35 @@
   transition: transform 200ms, -webkit-transform 200ms;
 }
 
+.Homepage-landing__header--slider {
+  -webkit-animation: slidein 250ms forwards;
+          animation: slidein 250ms forwards;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
