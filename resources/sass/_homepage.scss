@@ -1,16 +1,17 @@
 .Homepage {
-  border: solid;
   width: 100vw;
   padding: 16px;
   background-image: url("../images/homepage/background.png");
+  color: white;
 
+  /** Page 1 */
   &-landing {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: white;
+    margin: 48px 0;
 
     &__image {
       height: 60vh;
@@ -23,29 +24,61 @@
       font-size: 3.5em;
       text-align:  center;
       margin: 16px;
+      opacity: 0;
+      animation: appearIn 200ms 1s forwards;
 
       &--slider {
-        animation: slidein 350ms forwards;
+        animation: appearIn 200ms 1.5s forwards;
+      }
+    }
+  }
+
+  /** Page 2 */
+  &-programming-style {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 48px 0;
+
+    &__header {
+      font-size: 3.5em;
+      text-align: center;
+    }
+
+    &__description {
+      font-style: italic;
+      text-align: center;
+    }
+
+    &__styles-list {
+      display: flex;
+    }
+    &__card {
+      transition: transform 150ms, box-shadow 150ms;
+      .Homepage-programming-style__image {
+        height: 30vh;
+      }
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 12px 14px 0 black;
+        transform: scale(1.125);
+        transition: transform 150ms, box-shadow 150ms;
       }
     }
   }
 }
 
-@keyframes slidein {
+@keyframes appearIn {
   0% {
-    margin-left: 100%;
-    width: 300%;
+    transform: scale(4);
     opacity: 0;
   }
 
-  80% {
-    opacity: 0.2;
-  }
-
   100% {
-    margin-left: 0%;
     width: 100%;
     opacity: 1;
+    transform: scale(1);
   }
 }
 

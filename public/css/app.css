@@ -10,10 +10,12 @@
 }
 
 .Homepage {
-  border: solid;
   width: 100vw;
   padding: 16px;
   background-image: url(/images/background.png?13097ccedf3e281ea14a8ace743ca67f);
+  color: white;
+  /** Page 1 */
+  /** Page 2 */
 }
 
 .Homepage-landing {
@@ -22,7 +24,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  color: white;
+  margin: 48px 0;
 }
 
 .Homepage-landing__image {
@@ -39,46 +41,85 @@
   font-size: 3.5em;
   text-align: center;
   margin: 16px;
+  opacity: 0;
+  -webkit-animation: appearIn 200ms 1s forwards;
+          animation: appearIn 200ms 1s forwards;
 }
 
 .Homepage-landing__header--slider {
-  -webkit-animation: slidein 350ms forwards;
-          animation: slidein 350ms forwards;
+  -webkit-animation: appearIn 200ms 1.5s forwards;
+          animation: appearIn 200ms 1.5s forwards;
 }
 
-@-webkit-keyframes slidein {
+.Homepage-programming-style {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px 0;
+}
+
+.Homepage-programming-style__header {
+  font-size: 3.5em;
+  text-align: center;
+}
+
+.Homepage-programming-style__description {
+  font-style: italic;
+  text-align: center;
+}
+
+.Homepage-programming-style__styles-list {
+  display: flex;
+}
+
+.Homepage-programming-style__card {
+  transition: box-shadow 150ms, -webkit-transform 150ms;
+  transition: transform 150ms, box-shadow 150ms;
+  transition: transform 150ms, box-shadow 150ms, -webkit-transform 150ms;
+}
+
+.Homepage-programming-style__card .Homepage-programming-style__image {
+  height: 30vh;
+}
+
+.Homepage-programming-style__card:hover {
+  cursor: pointer;
+  box-shadow: 0 12px 14px 0 black;
+  -webkit-transform: scale(1.125);
+          transform: scale(1.125);
+  transition: box-shadow 150ms, -webkit-transform 150ms;
+  transition: transform 150ms, box-shadow 150ms;
+  transition: transform 150ms, box-shadow 150ms, -webkit-transform 150ms;
+}
+
+@-webkit-keyframes appearIn {
   0% {
-    margin-left: 100%;
-    width: 300%;
+    -webkit-transform: scale(4);
+            transform: scale(4);
     opacity: 0;
   }
 
-  80% {
-    opacity: 0.2;
-  }
-
   100% {
-    margin-left: 0%;
     width: 100%;
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
-@keyframes slidein {
+@keyframes appearIn {
   0% {
-    margin-left: 100%;
-    width: 300%;
+    -webkit-transform: scale(4);
+            transform: scale(4);
     opacity: 0;
   }
 
-  80% {
-    opacity: 0.2;
-  }
-
   100% {
-    margin-left: 0%;
     width: 100%;
     opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
