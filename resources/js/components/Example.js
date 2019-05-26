@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import landingBackgroundImage from "../../images/homepage/wallpaper.jpg"
-import styleTechoThumbnail from "../../images/homepage/style_techno_thumbnail.jpg"
-import styleManagementThumbnail from "../../images/homepage/style_management_thumbnail.jpg"
 import CARD from "./Card/Card";
+import HomeProgrammingStyleDialog from "./HomeProgrammingStyleDialog/HomeProgrammingStyleDialog";
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
-import {Router, Route} from "react-router-dom";
+
+import { Router, Route } from "react-router-dom";
 import { createBrowserHistory } from "history";
 import Login from "../components/Login/Login";
 
+import landingBackgroundImage from "../../images/homepage/wallpaper.jpg"
+import styleTechoThumbnail from "../../images/homepage/style_techno_thumbnail.jpg"
+import styleManagementThumbnail from "../../images/homepage/style_management_thumbnail.jpg"
 
 
 export default function Homepage(){
+
+  // 0 -> No dialog, 1 -> left dialog, 2 -> right dialog
+  const [displayedDialogNumber, setDisplayedDialogNumber] = React.useState(0);
+
   return (
     <div className="Homepage">
       <AppBar>
@@ -29,14 +35,17 @@ export default function Homepage(){
         <h1 className="Homepage-programming-style__header">Choisissez votre style de programmation</h1>
         <p className="Homepage-programming-style__description">Parce que toutes les aventures commencent par un choix</p>
         <div className="Homepage-programming-style__styles-list">
-          <CARD className="Homepage-programming-style__card">
+          <CARD className="Homepage-programming-style__card" onClick={() => setDisplayedDialogNumber(1)}>
             <img className="Homepage-programming-style__image" alt="Style managérial" src={styleManagementThumbnail}/>
           </CARD>
-          <CARD className="Homepage-programming-style__card">
+          <CARD className="Homepage-programming-style__card" onClick={() => setDisplayedDialogNumber(2)}>
             <img className="Homepage-programming-style__image" alt="Style technique" src={styleTechoThumbnail}/>
           </CARD>
         </div>
       </div>
+
+      <HomeProgrammingStyleDialog open={displayedDialogNumber === 1} onClose={() => setDisplayedDialogNumber(0)}>
+      </HomeProgrammingStyleDialog>
     </div>
   );
 }

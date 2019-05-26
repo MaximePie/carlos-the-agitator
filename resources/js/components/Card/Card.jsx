@@ -6,17 +6,20 @@ import classnames from "classnames";
  *
  * @param props
  * children: JSX Element rendered inside of the Card
- * className: string - Additional className
+ * className?: string - Additional className
+ * onClick?: () => void - Additional function to trigger when clicked
  */
 export default function CARD(props) {
   const classes = classnames(
-    "Card",
+    "HomeProgrammingStyleDialog.jsx",
     props.className
   );
 
   return (
-    <Card className={classes}>
-      {props.children}
-    </Card>
+    <div onClick={props.onClick ? () => props.onClick() : undefined}>
+      <Card className={classes}>
+        {props.children}
+      </Card>
+    </div>
   )
 }
