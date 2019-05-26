@@ -26,6 +26,8 @@
     },
     "dependencies": {
         "@material-ui/core": "^3.9.3",
+        "graphiql": "^0.13.0",
+        "react-router-dom": "^5.0.0"
         "classnames": "^2.2.6",
         "graphiql": "^0.13.0"
     }

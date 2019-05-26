@@ -4,10 +4,20 @@ import landingBackgroundImage from "../../images/homepage/wallpaper.jpg"
 import styleTechoThumbnail from "../../images/homepage/style_techno_thumbnail.jpg"
 import styleManagementThumbnail from "../../images/homepage/style_management_thumbnail.jpg"
 import CARD from "./Card/Card";
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import {Router, Route} from "react-router-dom";
+import { createBrowserHistory } from "history";
+import Login from "../components/Login/Login";
+
+
 
 export default function Homepage(){
   return (
     <div className="Homepage">
+      <AppBar>
+        <Button onClick={() => history.push('/login')}>Se connecter</Button>
+      </AppBar>
       <div className="Homepage-landing">
         <h1 className="Homepage-landing__header">Et si on changeait...</h1>
         <img className="Homepage-landing__image" alt="Fond d'écran" src={landingBackgroundImage}/>
@@ -32,5 +42,12 @@ export default function Homepage(){
 }
 
 if (document.getElementById('root')) {
-  ReactDOM.render(<Homepage/>, document.getElementById('root'));
+  const browserHistory = createBrowserHistory()
+
+  ReactDOM.render(
+    <Router history={browserHistory}>
+      <Route exact path="/" component={Homepage}/>
+      <Route path="/login" component={Login}/>
+    </Router>
+    , document.getElementById('root'));
 }
