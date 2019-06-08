@@ -1,0 +1,15 @@
+.Login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__header {
+    text-align: center;
+  }
+
+  &__form {
+    width: 33vw;
+  }
+}

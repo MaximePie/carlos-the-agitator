@@ -18,9 +18,8 @@ export default function Homepage(props){
 
   // 0 -> No dialog, 1 -> left dialog, 2 -> right dialog
   const [displayedDialogNumber, setDisplayedDialogNumber] = React.useState(0);
-  console.log(props)
   return (
-    <div className="Homepage">
+    <div className="Homepage Visitor-content">
       <AppBar>
         <Button onClick={() => props.history.push('/login')}>Se connecter</Button>
       </AppBar>

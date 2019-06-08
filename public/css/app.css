@@ -1,5 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+/** EVERY CONTENT WE ACCESS WHILE UNAUTHENTICATED */
+
+.Visitor-content {
+  background-image: url(/images/background.png?13097ccedf3e281ea14a8ace743ca67f);
+}
+
+.header {
+  font-size: 5em;
+}
+
+.header-white {
+  color: white;
+}
+
 /** ATOMS */
 
 .Card {
@@ -10,9 +24,7 @@
 }
 
 .Homepage {
-  width: 100vw;
   padding: 16px;
-  background-image: url(/images/background.png?13097ccedf3e281ea14a8ace743ca67f);
   color: white;
   /** Page 1 */
   /** Page 2 */
@@ -168,6 +180,22 @@
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+}
+
+.Login {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Login__header {
+  text-align: center;
+}
+
+.Login__form {
+  width: 33vw;
 }
 
 /*!

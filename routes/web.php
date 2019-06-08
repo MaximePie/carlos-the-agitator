@@ -11,10 +11,7 @@
 |
 */
 
-Route::view('/{path?}', 'welcome')
-    ->where('path', '.*')
-    ->name('react');
+Route::post('/login', 'LoginController@store');
 
-Route::get('/login', function () {
-    return view('login');
-});
+
+Route::view('/{path?}', 'welcome');

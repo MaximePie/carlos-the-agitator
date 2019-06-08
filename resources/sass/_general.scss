@@ -1,0 +1,12 @@
+/** EVERY CONTENT WE ACCESS WHILE UNAUTHENTICATED */
+.Visitor-content {
+  background-image: url("../images/homepage/background.png");
+}
+
+.header {
+  font-size: 5em;
+
+  &-white {
+    color: white;
+  }
+}

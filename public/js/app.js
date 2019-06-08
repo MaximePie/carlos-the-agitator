@@ -109143,9 +109143,8 @@ function Homepage(props) {
       displayedDialogNumber = _React$useState2[0],
       setDisplayedDialogNumber = _React$useState2[1];
 
-  console.log(props);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "Homepage"
+    className: "Homepage Visitor-content"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_4___default.a, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5___default.a, {
     onClick: function onClick() {
       return props.history.push('/login');
@@ -109282,9 +109281,60 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return LOGIN; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Card_Card_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Card/Card.jsx */ "./resources/js/components/Card/Card.jsx");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
 
 function LOGIN(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "HAHAHAHAHA");
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(""),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      mail = _React$useState2[0],
+      setMail = _React$useState2[1];
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(""),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      password = _React$useState4[0],
+      setPassword = _React$useState4[1];
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Login Visitor-content"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "Login__header header-white"
+  }, "Identification"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Card_Card_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    className: "Login__form"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    action: ""
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    onChange: function onChange() {
+      return setMail(event.target.value);
+    },
+    type: "text",
+    className: "Login__mail-field",
+    placeholder: "E-mail de super-h\xE9ros"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    onChange: function onChange() {
+      return setPassword(event.target.value);
+    },
+    type: "password",
+    className: "Login__password-field",
+    placeholder: "Mot de passe top secret"
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    type: "button",
+    onClick: login,
+    className: "Login__submit"
+  }, "Rejoindre l'aventure"))));
+  /**
+   * This function will send the entered data to the server, based on the current fields state
+   */
+
+  function login() {}
 }
 
 /***/ }),
