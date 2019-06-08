@@ -14,15 +14,15 @@ import styleTechoThumbnail from "../../images/homepage/style_techno_thumbnail.jp
 import styleManagementThumbnail from "../../images/homepage/style_management_thumbnail.jpg"
 
 
-export default function Homepage(){
+export default function Homepage(props){
 
   // 0 -> No dialog, 1 -> left dialog, 2 -> right dialog
   const [displayedDialogNumber, setDisplayedDialogNumber] = React.useState(0);
-
+  console.log(props)
   return (
     <div className="Homepage">
       <AppBar>
-        <Button onClick={() => history.push('/login')}>Se connecter</Button>
+        <Button onClick={() => props.history.push('/login')}>Se connecter</Button>
       </AppBar>
       <div className="Homepage-landing">
         <h1 className="Homepage-landing__header">Et si on changeait...</h1>

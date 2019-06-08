@@ -109136,18 +109136,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-function Homepage() {
+function Homepage(props) {
   // 0 -> No dialog, 1 -> left dialog, 2 -> right dialog
   var _React$useState = react__WEBPACK_IMPORTED_MODULE_0___default.a.useState(0),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       displayedDialogNumber = _React$useState2[0],
       setDisplayedDialogNumber = _React$useState2[1];
 
+  console.log(props);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Homepage"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_AppBar__WEBPACK_IMPORTED_MODULE_4___default.a, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Button__WEBPACK_IMPORTED_MODULE_5___default.a, {
     onClick: function onClick() {
-      return history.push('/login');
+      return props.history.push('/login');
     }
   }, "Se connecter")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Homepage-landing"
