@@ -94,39 +94,6 @@
   transition: transform 150ms, box-shadow 150ms, -webkit-transform 150ms;
 }
 
-.Homepage-programming-style__card:hover .Homepage-programming-style__card-animation-wrapper {
-  background: rgba(0, 0, 0, 0.69);
-  transition: all 200ms ease-in-out;
-}
-
-.Homepage-programming-style__card:hover .Homepage-programming-style__card-animation-text {
-  font-size: 1.7em;
-  transition: all 200ms ease-in-out;
-  opacity: 1;
-}
-
-.Homepage-programming-style__card-animation-wrapper {
-  transition: all 200ms ease-in-out;
-  background: #000000;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-}
-
-.Homepage-programming-style__card-animation-text {
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-  transition: all 200ms ease-in-out;
-  position: absolute;
-  font-size: 2.5em;
-  font-weight: 900;
-  opacity: 0;
-}
-
 @-webkit-keyframes appearIn {
   0% {
     -webkit-transform: scale(4);

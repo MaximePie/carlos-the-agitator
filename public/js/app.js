@@ -109172,11 +109172,7 @@ function Homepage() {
     onClick: function onClick() {
       return setDisplayedDialogNumber(1);
     }
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "Homepage-programming-style__card-animation-wrapper"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "Homepage-programming-style__card-animation-text"
-  }, "Management")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "Homepage-programming-style__image",
     alt: "Style manag\xE9rial",
     src: _images_homepage_style_management_thumbnail_jpg__WEBPACK_IMPORTED_MODULE_11___default.a
