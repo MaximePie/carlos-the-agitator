@@ -36,6 +36,9 @@ export default function Homepage(){
         <p className="Homepage-programming-style__description">Parce que toutes les aventures commencent par un choix</p>
         <div className="Homepage-programming-style__styles-list">
           <CARD className="Homepage-programming-style__card" onClick={() => setDisplayedDialogNumber(1)}>
+            <div className="Homepage-programming-style__card-animation-wrapper">
+              <p className="Homepage-programming-style__card-animation-text">Management</p>
+            </div>
             <img className="Homepage-programming-style__image" alt="Style managérial" src={styleManagementThumbnail}/>
           </CARD>
           <CARD className="Homepage-programming-style__card" onClick={() => setDisplayedDialogNumber(2)}>
